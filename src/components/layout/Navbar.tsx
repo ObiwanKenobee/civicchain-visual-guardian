@@ -9,6 +9,7 @@ import {
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -22,16 +23,16 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex space-x-1">
           <Button variant="ghost" className="text-muted-foreground hover:text-foreground" asChild>
-            <a href="/">Dashboard</a>
+            <Link to="/">Dashboard</Link>
           </Button>
           <Button variant="ghost" className="text-muted-foreground hover:text-foreground" asChild>
-            <a href="#">Watchlist</a>
+            <Link to="/watchlist">Watchlist</Link>
           </Button>
           <Button variant="ghost" className="text-muted-foreground hover:text-foreground" asChild>
-            <a href="#">Reports</a>
+            <Link to="/reports">Reports</Link>
           </Button>
           <Button variant="ghost" className="text-muted-foreground hover:text-foreground" asChild>
-            <a href="#">Submit Evidence</a>
+            <Link to="/submit-evidence">Submit Evidence</Link>
           </Button>
         </div>
       </div>
