@@ -11,15 +11,15 @@ type TrustScoreProps = {
 };
 
 const getTrustColor = (score: number) => {
-  if (score >= 70) return 'trust-high';
-  if (score >= 40) return 'trust-medium';
-  return 'trust-low';
+  if (score >= 70) return 'text-green-600';
+  if (score >= 40) return 'text-amber-500';
+  return 'text-red-500';
 };
 
 const getProgressColor = (score: number) => {
-  if (score >= 70) return 'bg-trust-high';
-  if (score >= 40) return 'bg-trust-medium';
-  return 'bg-trust-low';
+  if (score >= 70) return 'bg-green-600';
+  if (score >= 40) return 'bg-amber-500';
+  return 'bg-red-500';
 };
 
 const TrustScore = ({ score, agency, category }: TrustScoreProps) => {
@@ -36,7 +36,9 @@ const TrustScore = ({ score, agency, category }: TrustScoreProps) => {
         <Progress 
           value={score} 
           className="h-2" 
-          indicatorClassName={progressColor}
+          style={{ 
+            '--progress-foreground': progressColor.replace('bg-', 'var(--')
+          } as React.CSSProperties}
         />
         <span className={`text-sm font-semibold ${trustColor}`}>{score}%</span>
       </div>

@@ -5,7 +5,7 @@ import LiveFeed from '@/components/dashboard/LiveFeed';
 import TrustIndexWidget from '@/components/dashboard/TrustIndexWidget';
 import AISummaryBox from '@/components/dashboard/AISummaryBox';
 import QuickAccessButtons from '@/components/dashboard/QuickAccessButtons';
-import { Chain } from 'lucide-react';
+import { Link2, Eye } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -20,7 +20,7 @@ const Index = () => {
               <p className="text-muted-foreground">The transparent civic accountability platform</p>
             </div>
             <div className="hidden md:flex items-center text-sm text-muted-foreground bg-white border border-border rounded-full px-3 py-1">
-              <Chain className="h-3 w-3 mr-1 text-civic-blue animate-pulse-gentle" />
+              <Link2 className="h-3 w-3 mr-1 text-civic-blue animate-pulse-gentle" />
               <span>Latest block: <span className="font-mono">f8a2e9c4</span></span>
             </div>
           </div>
